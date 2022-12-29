@@ -2,7 +2,7 @@ import { ADD_ONE, APPLY_NUMBER, CHANGE_OPERATION } from './../actions';
 
 export const initialState = {
     total: 0,
-    operation: "*",
+    operation: "+",
     memory: 0
 }
 
@@ -13,6 +13,7 @@ export const initialState = {
 // }
 
 const calculateResult = (num1, num2, operation) => {
+
     switch(operation) {
         case("+"):
             return num1 + num2;
@@ -32,6 +33,7 @@ const reducer = (state, action) => {
             });
 
         case(APPLY_NUMBER):
+        // alert("hello")
             return ({ 
                 ...state, 
                 total: calculateResult(state.total, action.payload, state.operation)

@@ -8,5 +8,6 @@ export const addOne = () => {
 }
 
 export const applyNumber = (number) => {
+    // alert("Hello")
     return({type:APPLY_NUMBER, payload:number});
 }
